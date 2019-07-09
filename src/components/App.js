@@ -6,7 +6,7 @@ class App extends Component {
     render() {
         return (
             <PageTemplate>
-                <TodoInput />
+                <TodoInput/>
             </PageTemplate>
         )
     }

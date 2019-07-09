@@ -1,13 +1,14 @@
+@import './utils';
 
 .todo-input {
   border-top: 1px solid $oc-gray-2;
   border-bottom: 1px solid $oc-gray-2;
-  // flex를 사용하여 손쉽게 레이아웃을 설정합니다.
+  // flex를 사용하여 손쉽게 레이아웃을 설정
   display: flex;
   padding: 1rem;
   input {
-    // input의 기본 스타일을 지우고 새 스타일을 정의합니다.
-    flex: 1; // 부모 요소에서 add-button을 제외한 나머지 공간을 차지합니다.
+    // input의 기본 스타일을 지우고 새 스타일을 정의
+    flex: 1;
     font-size: 1.1rem;
     outline: none;
     border: none;
@@ -30,12 +31,15 @@
     align-items: center;
     justify-content: center;
     cursor: pointer;
+
     &:hover {
-      background: $-oc-green-7;
+      background: $oc-green-7;
       color: white;
     }
+
     &:active {
       background: $oc-green-8;
     }
   }
 }
+
