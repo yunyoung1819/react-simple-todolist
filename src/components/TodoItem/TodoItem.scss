@@ -28,10 +28,10 @@
     background: $oc-gray-0;
   }
   &:hover {
-    background: $oc-gray-0;
+    background: $oc-gray-1;
   }
 }
 
-.todo-ite + .todo-ite {
+.todo-item + .todo-item {
   border-top: 1px solid $oc-gray-1;
 }
