@@ -3,13 +3,21 @@ import TodoItem from '../TodoItem';
 
 class TodoList extends Component {
     render() {
+        const { todos, onToggle } = this.props;
+        const todoList = todos.map(
+            todo => (
+                <TodoItem
+                    key={todo.id}
+                    done={todo.done}
+                    onToggle={() => onToggle(todo.id)}>
+                    {todo.text}
+                </TodoItem>
+            )
+        );
+
         return (
             <div>
-                <TodoItem done> 헬스가서 운동하기 </TodoItem>
-                <TodoItem> 리액트 공부하기 </TodoItem>
-                <TodoItem> 일본어 공부하기 </TodoItem>
-                <TodoItem> 스프링 JPA 공부하기 </TodoItem>
-                <TodoItem> 영어 공부하기 </TodoItem>
+                {todoList}
             </div>
         );
     }
