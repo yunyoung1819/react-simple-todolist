@@ -1,7 +1,6 @@
-@import 'utils';
+@import '~open-color/open-color';
 
-
-body {
+.body {
   background: $oc-gray-1;
   margin: 0px;
 }

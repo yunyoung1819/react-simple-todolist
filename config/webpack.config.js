@@ -428,7 +428,7 @@ module.exports = function(webpackEnv) {
               use: getStyleLoaders({importLoaders: 2}).concat({
                 loader: require.resolve('sass-loader'),
                 options: {
-                  includePaths: [paths.appSrc + '/styles']
+                  // includePaths: [paths.appSrc + '/styles']
                 }
               })
             },
@@ -442,7 +442,7 @@ module.exports = function(webpackEnv) {
                   sourceMap: isEnvProduction && shouldUseSourceMap,
                   modules: true,
                   getLocalIdent: getCSSModuleLocalIdent,
-                  includePaths: [paths.styles]
+                  // includePaths: [paths.styles]
                 },
                 'sass-loader'
               ),
