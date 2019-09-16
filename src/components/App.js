@@ -67,6 +67,12 @@ class App extends Component {
         });
     }
 
+    // 선택한 id를 배열에서 제거합니다.
+    handleRemove = (id) => {
+        const { todos } = this.state;
+        const index = todos.findIndex(todo => todo.id === id);
+    }
+
     render() {
         const { input, todos } = this.state;
         const {
