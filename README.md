@@ -1,1 +1,1 @@
-React Simple Todo-List
+React Todo-List
