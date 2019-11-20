@@ -9,3 +9,16 @@ const REMOVE = 'todos/REMOVE';  // 삭제
 export const insert = createAction(INSERT);
 export const toggle = createAction(TOGGLE);
 export const remove = createAction(REMOVE);
+
+const initialState = List([
+    Map({
+        id: 0,
+        text: '리액트 공부하기',
+        done: true
+    }),
+    Map({
+        id: 1,
+        text: '컴포넌트 스타일링 해보기',
+        done: false
+    })
+]);
