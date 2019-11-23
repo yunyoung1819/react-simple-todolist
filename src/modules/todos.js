@@ -22,3 +22,26 @@ const initialState = List([
         done: false
     })
 ]);
+
+export default handleAction({
+    [INSERT: (state, action) => {
+        const { id, text, done } = action.payload;
+
+        return state.push(Map({
+            id,
+            text,
+            done
+        }));
+    },
+    [TOGGLE]: (state, action) => {
+        const { payload: id } = action;
+        const index = state.findIndex(todo => todo.get('id') === id);
+
+        return state.updateIn([index, 'done'], done => !done);
+    },
+    [REMOVE]: (state, action) => {
+        const { payload: id } = action;
+        const index = state.findIndex(todo => todo.get('id') === id);
+        return state.delete(index);
+    }
+}, initialState)
