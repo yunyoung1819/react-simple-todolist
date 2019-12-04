@@ -54,7 +54,7 @@ export default connect(
         value: state.input.get('value')
     }),
     (dispatch) => ({
-        InputActions: bindActionCreators(inputActions. dispatch),
+        InputActions: bindActionCreators(inputActions, dispatch),
         TodosActions: bindActionCreators(todosActions, dispatch)
     })
 )(TodoInputContainer);
